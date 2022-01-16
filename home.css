@@ -67,12 +67,17 @@ header {
 main {
   grid-area: right;
   display: flex; 
+  width: 36.3rem;
   flex-direction: column;
   align-content: center;
 }
-
+ 
 main .container {
   width: min(36.3rem 100%);
+  /*sempre da preferencia para o valor minimo
+  quando qualquer um dos dois valores forem 
+  menor que o ouctro a função min() é definida 
+  com o menor valor */
 }
 
 main h2 {
@@ -89,6 +94,13 @@ main h2 {
 
 input{
   border: 0.2rem solid var(--grey-blue);
-  pad: 0 1.6rem;
+  padding: 0 1.6rem;
+  border-radius: 0.8rem;
  
 }
+
+input, button, .button{
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+
