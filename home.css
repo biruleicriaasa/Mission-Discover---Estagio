@@ -1,0 +1,94 @@
+
+:root {
+  /*cores para a pagina*/
+  --black-blue: #0D114F;
+  --white: #FAFAFA;
+  --light-blue: ;
+  --blue: #3485FF;
+  --red-pink: #E83F5B;
+  --background: #FBFCFF;
+  --overlay: #040911;
+  --icons-details: #A5B0C1;
+  
+  --grey-dark: #4D5E77;
+  --grey-blue: #A1B2CD;
+  --grey-medium: #D3D9E2;
+  --grey-light: #E5EAF1;
+  
+  /*fontes utilizadas na pagina*/
+   font-size: 62.5%; /*é um macetezinho da instrutora. 
+   ela está definido um novo padrão do tamanho da fonte.
+   para a pagina toda.
+   16px = 100%      ? = 62.5% de 16px
+   10px =  ?      
+   agora que o padrão é 10px
+   basta dividir as meidas no figma por 10.
+   */
+  }
+.content {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  /*criando duas colunas responsivas  */
+
+  grid-template-rows: 11.4rem 1fr;
+  /*definindo duas linhas na grid. 
+    a unidade 1fr funciona da segunte forma:como 
+    ja defini uma linha com 11.4rem, a 1fr
+    vai pegar o restante da caixa .content */
+
+    grid-template-areas:
+    "header header" /* 'referencia a primeira linha' */ 
+    "left right"; /* 'referencia a segunda linha' */
+    /*a caixa .content foi transformanda em uma 
+      matriz 2 x 2 e utilizamos a propriedade
+      grid-template-areas para nomear e posicionar 
+      as outras caixasnas areas(quadrados)da grid.*/
+    /*fala sobre 1:34:50*/ 
+}
+
+header {
+  grid-area: header; /*aqui estou declarando que essa 
+  tag header é a box-1 que será pociionada nas 
+  duas primeira areas da primeira linha. o 
+  pocionamento foi declarado na ".contat {}"*/
+}
+
+#bg {
+  grid-area: left; /*aqui estou declarando que
+  a caixa com id="bg" será posocionada na area "left".
+  o pocionamento foi declarado na ".contat {}"*/
+  background: url('Assets/Images/home-image-background.svg') no-repeat top/contain;
+  /*o no-repeat impede que a imagem se repita
+  varias vezes. o top/contain pociona a caixa
+  #bg no top e faz com que o conteudo se adapt ao
+  tamanho da caixa #bg*/
+}
+
+main {
+  grid-area: right;
+  display: flex; 
+  flex-direction: column;
+  align-content: center;
+}
+
+main .container {
+  width: min(36.3rem 100%);
+}
+
+main h2 {
+  font-family: 'Poppins' ,sans-serif;
+  font-size: clamp(20px, 5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--black-blue);
+
+  margin-bottom: 2.4rem;
+
+}
+
+
+
+input{
+  border: 0.2rem solid var(--grey-blue);
+  pad: 0 1.6rem;
+ 
+}

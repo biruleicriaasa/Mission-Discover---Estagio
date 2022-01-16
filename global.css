@@ -1,0 +1,110 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+  /*resetando essas propriedades*/
+}
+
+:root {
+  /*cores para a pagina*/
+  --black-blue: #0D114F;
+  --white: #FAFAFA;
+  --light-blue: ;
+  --blue: #3485FF;
+  --red-pink: #E83F5B;
+  --background: #FBFCFF;
+  --overlay: #040911;
+  --icons-details: #A5B0C1;
+  
+  --grey-dark: #4D5E77;
+  --grey-blue: #A1B2CD;
+  --grey-medium: #D3D9E2;
+  --grey-light: #E5EAF1;
+  
+  /*fontes utilizadas na pagina*/
+   font-size: 62.5%; /*é um macetezinho da instrutora. 
+   ela está definido um novo padrão do tamanho da fonte.
+   para a pagina toda.
+   16px = 100%      ? = 62.5% de 16px
+   10px =  ?      
+   agora que o padrão é 10px
+   basta dividir as meidas no figma por 10.
+   */
+  }
+body {
+height: 100vh; /*100vh pega toda a altura da tela 
+                do dispositivo*/  
+width: 100vw; /*100vw pega toda a lagura da tela
+                do dispositivo*/
+background: var(--background);
+}
+
+boyd, button, input, textarea {
+/* pode ser usado para se trabalhar 
+com tamanhos de fonte; permite definir 
+um font-size que cresça com o tamanho
+da viewport, mas não fique abaixo de um
+tamanho de fonte mínimo ou acima de um
+tamanho de fonte máximo.*/
+font-size: clamp(1.4rem, 1.6rem, 2vw);
+         /*clamp(minimo, Tamanho preferencial, maximo)*/
+font-family: 'Open Sans', sans-serif;
+/*fonte padrão*/
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;/*centra lizar a caixa */
+}
+
+.sr-only {
+  position:absolute;/*para ficar acima das demais caixas para podermos movimenta-lo.*/
+  width: 1px;
+  height: 1px;
+  /*ao deixar a width e height com 1px a caixa fica
+    como um pontinho na pagina mas o texto transborda
+    da caixa label*/
+  overflow: hidden; /*não mostrar o conteudo que transbordeou da caixa label*/
+  padding: 0; /*para não haver a area ao redor do
+  conteudo*/
+  border-width: 0; /*retiro as borda da caixa*/
+  clip-path: rect(0, 0, 0, 0); 
+  /*estabelece uma forma de figura geométrica 
+  á caixa e pode definir a aréa da caixa.
+  nesse caso a figura/caixa foi zerada de todos
+  os lados (left top righit bottom). 
+    */
+  border-width: 0; /*retiro as borda da reta
+  que foi definida na propriedade clip-path logo acima*/
+
+  margin: -1px; /*para se afastar da margim
+  so que para fora da pagina web*/
+  white-space: nowrap;/*recolhe todos os espaços
+  em branco da caixa e elimina as linhas quebrada
+  pelo conteudo*/
+}
+
+button,
+input, .button {
+  height: 5rem;
+  border-radius: 0.8rem;
+  align-items: center;
+
+}
+
+button .button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 0; /* quando meche em caixas 
+  que comtem somente uma linha  é retirado 
+  os espaçamentos da linha para que nao
+   haver desalinhamento das outras caixas*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
